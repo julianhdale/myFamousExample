@@ -26,8 +26,27 @@ define(function(require, exports, module) {
     }));
     function PageList(options) {
         this.options = options;
+        this.currentPage = 0;
     }
 
+    PageList.prototype.getNextPage = function() {
+        //TODO: make this use mod so that it will never return null
+        if (this.currentPage >= appPages.length) {
+            return null;
+        } else {
+            this.currentPage++;
+            return appPages[this.currentPage];
+        }
+    };
+
+    PageList.prototype.getPrevPage = function() {
+        if (this.currentPage < 0) {
+            return null;
+        } else {
+            this.currentPage--;
+            return appPages[this.currentPage];
+        }
+    };
     PageList.prototype.get = function(index) {
         return (appPages[index])? appPages[index]: null;
     };

@@ -14,19 +14,13 @@ require.config({
     }
 });
 require(['main']);
-
+/*
 require(['jquery'], function($) {
-  /*  $(function() {
-        window.console.log('jquery has been loaded');
-        var a = $('.blue-bg').eq(0);
-        if (a) {
-            a.css({'background-color': 'RED'});
-        } else {
-            window.console.log('fuck');
-        }
-        $('#next').click(function(event) {
-           // alert('fuck');
-            window.alert('yay');
+    $(document).ready(function() {
+        console.log('ok');
+        $(document).on('click', '#next', function() {
+            console.log('hello');
         });
-    });*/
+    });
 });
+*/

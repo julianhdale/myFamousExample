@@ -60,5 +60,20 @@ define(function(require, exports, module) {
    /* Engine.on('click', function(arg1, arg2) {
         window.console.log('click registered: ', arg1, arg2);
     });*/
+    //need to find a better method than this
+    $(document).on('click', '#next', function() {
+        window.console.log('next');
+        var nextPage = pageList.getNextPage();
+        if (nextPage){
+            edgeSwapper.show(nextPage);
+        }
+    });
+    $(document).on('click', '#prev', function() {
+        window.console.log('prev');
+        var prevPage = pageList.getPrevPage();
+        if (prevPage) {
+            edgeSwapper.show(prevPage);
+        }
+    });
 
 });
