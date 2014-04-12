@@ -1,0 +1,11 @@
+{
+  "generator-famous": {
+    "projectName": "myFamousApp",
+    "projectDesc": "Mobile Ap",
+    "authorLogin": "julianhdale",
+    "author": {
+      "name": "Julian Dale",
+      "email": "jdale@solstice-mobile.com"
+    }
+  }
+}
